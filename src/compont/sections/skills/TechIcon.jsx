@@ -21,7 +21,7 @@ export const SkillsList=[
             ,
             {
                 name:"Node.js",
-                Path:"/public/ImageToStl.com_3d-drawing (2).glb",
+                Path:"/ImageToStl.com_3d-drawing (2).glb",
                 scale:0.03,
                 rotation:[0,0,0],
             }
