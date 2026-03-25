@@ -38,9 +38,12 @@ function Hero(){
                 <img src={G42} className="w-[200px] h-[200px] animate-pulse [animation-duration:1.5;;;s]" />
             </div>
            
-           <div className="hero-layout">
+           <div className="hero-layout
+            flex flex-col md:flex-row items-center justify-between min-h-screen
+           ">
 
-            <header className="flex flex-col justify-center items-center  md:w-full w-screen md:px-20 px-0 ">
+            <header className="flex flex-col justify-center items-center  md:w-1/2 w-full px-5
+              md:px-20  ">
                 <div className="flex flex-col gap-7">
                     <div className="hero-text">
                         <h6 className="">I am Lama Aljuaid,Software <br></br> Engineer Focused on
@@ -66,7 +69,7 @@ function Hero(){
 
 
             {/* 3D MODEL */}
-                 <figure className="xl:w-[50%] w-full h-full md:mt-[-100px] md:ml-[-200px] mt-60 ml-[-400px] md:mt-">
+                 <figure className="relative xl:w-[50%] w-full h-[500px] md:h-full md:top-[-80px] md:left-[-50px] top-0 left-0 flex justify-center items-center">
                            <div className="hero-3d-layout w-full h-full pointer-events-none flex">
                              <HerpExperience />
                            </div>
