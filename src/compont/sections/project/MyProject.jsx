@@ -13,6 +13,7 @@ import user from "../../../assets/Video/user.MP4";
 import weather from "../../../assets/Video/weather.MP4";
 import calculator from "../../../assets/Video/calculator.MP4";
 gsap.registerPlugin(ScrollTrigger);
+import Stars from '../../../assets/Stars.png'
 // import Particles from '../../sections/HeroModel/Particles'
 
 function Play({ src, videoRef, Enter, Leave }) {
@@ -64,9 +65,9 @@ function MyProject() {
     videoRef.current.currentTime = 0;
     setPlay(false);
   };
-
+console.log(Stars)
   return (
-    <section className="my-project"
+    <section className="my-project" 
     id="project"
     >
       <h1 className="title ">My Projects</h1>
