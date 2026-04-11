@@ -59,12 +59,13 @@ function Skills() {
                   <Canvas
                     style={{ height: "150px", width: "100%" }}
                     className="h-[150px] w-[100%]"
-                    gl={{ powerPreference: "low-power", antialias: false }}
+                    gl={{ powerPreference: "high-performance", antialias: true }}
+                    camera={{ position: [0, 0, 5]}}
                   >
                     <ambientLight intensity={0.3} />
                     <directionalLight position={[5, 5, 5]} intensity={1} />
                     <Environment preset="city" />
-                    <OrbitControls enableZoom={false} enableRotate={false} />
+                    <OrbitControls enableZoom={false}  />
                     <Float speed={7} rotationIntensity={3} floatIntensity={2}>
                       <group>
                         <TechIcons model={icon} />

@@ -55,7 +55,8 @@ function MyProject() {
   // const videoRef5 = useRef(null);
   const [play, setPlay] = useState(false);
 
-  const handleMouseEnters = () => {
+  const handleMouseEnters = (e) => {
+     e.preventDefault() 
     videoRef.current.play();
     setPlay(true);
   };
@@ -65,6 +66,8 @@ function MyProject() {
     videoRef.current.currentTime = 0;
     setPlay(false);
   };
+
+
 console.log(Stars)
   return (
     <section className="my-project" 
@@ -77,9 +80,14 @@ console.log(Stars)
             ref={videoRef}
             src={Miran}
             onMouseEnter={handleMouseEnters}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseLeave={handleMouseLeave}
             muted
             loop
+            playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
 
           {!play && (
@@ -123,6 +131,8 @@ console.log(Stars)
           <video
             ref={videoRef2}
             src={Gaming}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseEnter={() => videoRef2.current.play()}
             onMouseLeave={() => {
               videoRef2.current.pause();
@@ -130,6 +140,9 @@ console.log(Stars)
             }}
             muted
             loop
+             playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
         </div>
 
@@ -166,6 +179,8 @@ console.log(Stars)
           <video
             ref={videoRef3}
             src={stopWatch}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseEnter={() => videoRef3.current.play()}
             onMouseLeave={() => {
               videoRef3.current.pause();
@@ -173,6 +188,9 @@ console.log(Stars)
             }}
             muted
             loop
+             playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
         </div>
 
@@ -209,6 +227,8 @@ console.log(Stars)
           <video
             ref={videoRef4}
             src={user}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseEnter={() => videoRef4.current.play()}
             onMouseLeave={() => {
               videoRef4.current.pause();
@@ -216,6 +236,9 @@ console.log(Stars)
             }}
             muted
             loop
+             playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
         </div>
 
@@ -255,6 +278,8 @@ console.log(Stars)
           <video
             ref={videoRef5}
             src={weather}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseEnter={() => videoRef5.current.play()}
             onMouseLeave={() => {
               videoRef5.current.pause();
@@ -262,6 +287,9 @@ console.log(Stars)
             }}
             muted
             loop
+             playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
         </div>
 
@@ -300,6 +328,8 @@ console.log(Stars)
           <video
             ref={videoRef6}
             src={calculator}
+            onTouchStart={handleMouseEnters}
+            onTouchEnd={handleMouseLeave}
             onMouseEnter={() => videoRef6.current.play()}
             onMouseLeave={() => {
               videoRef6.current.pause();
@@ -307,6 +337,9 @@ console.log(Stars)
             }}
             muted
             loop
+             playsInline
+            disablePictureInPicture
+            preload="metadata"
           ></video>
         </div>
 

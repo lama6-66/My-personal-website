@@ -1,4 +1,4 @@
-import { OrbitControls, useGLTF } from "@react-three/drei"
+import { OrbitControls, useGLTF,Center } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber";
 import { Environment, Float } from "@react-three/drei"
 import { useMemo } from "react";
@@ -147,7 +147,7 @@ function TechIcons({ model }) {
 
   const clonedScene = useMemo(() => scene.clone(), [scene])
 
-  return <primitive object={clonedScene} scale={model.scale} />
+  return <primitive object={clonedScene} scale={model.scale} rotation={model.rotation} />
 }
 
 
